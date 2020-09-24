@@ -1261,6 +1261,8 @@ MonoBehaviour:
   - {fileID: 2209683159978233973, guid: 4112060b1257f194f9e52deafc116b33, type: 3}
   - {fileID: 4651521059935129633, guid: 43c5b3d6c39873843a398a9a0f25fbb7, type: 3}
   - {fileID: 5687531192852538739, guid: 1561e2ef41860ff4baee92c9b1a4bfc5, type: 3}
+  closedRoom: {fileID: 3551137569268341725, guid: 66e574c1f3d7d0b439cd9ceb6904cd21,
+    type: 3}
 --- !u!4 &1005026352
 Transform:
   m_ObjectHideFlags: 0
