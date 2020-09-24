@@ -14,7 +14,7 @@ public class RoomSpawner : MonoBehaviour
     private int rand;
     [HideInInspector] public bool spawned;
 
-    private void Start()
+    private void Awake()
     {
         spawned = false;
         _roomTemplates = GameObject.FindGameObjectWithTag("Rooms").GetComponent<RoomTemplates>();
@@ -55,10 +55,14 @@ public class RoomSpawner : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //print("hello");
-        if (collision.CompareTag("SpawnPoint"))
+        if (collision.CompareTag("SpawnPoint") && collision.GetComponent<RoomSpawner>() != null)
         {
-            Destroy(gameObject);
+            if (collision.GetComponent<RoomSpawner>().spawned == false && spawned == false)
+            {
+                Instantiate(_roomTemplates.closedRoom, transform.position, Quaternion.identity);
+                Destroy(gameObject);
+            }
+            spawned = true;
         }
     }
 }
