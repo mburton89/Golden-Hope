@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 16bb2cef3fdd563409fef913dda24037
+=======
+guid: 5421daf0bb7a6b046ae3eb3322a1d1ed
+>>>>>>> origin/justin-9-24-enemy
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
