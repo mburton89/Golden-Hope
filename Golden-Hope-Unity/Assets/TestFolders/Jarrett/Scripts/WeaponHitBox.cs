@@ -17,7 +17,7 @@ public class WeaponHitBox : MonoBehaviour
         if (other.gameObject.tag == "Enemy")
         {
             Debug.Log("Enemy in Range");
-            _controller.ApplyDamage(other.gameObject.GetComponent<Enemy>());
+            _controller.ApplyDamage(other.gameObject.GetComponent<EnemyUI>());
         }
     }
 }

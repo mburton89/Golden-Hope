@@ -265,6 +265,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyShooter
       objectReference: {fileID: 0}
+    - target: {fileID: 6290498147737962039, guid: 60f2943ae4ccc6849a5cfee8bdcac6df,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6290498147737962039, guid: 60f2943ae4ccc6849a5cfee8bdcac6df,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 8686288521414464837, guid: 60f2943ae4ccc6849a5cfee8bdcac6df,
         type: 3}
       propertyPath: bulletForce
@@ -383,6 +393,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b5807eab50659f42807af4fa55e8fb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jarrettsButton: {fileID: 0}
   bottomRooms:
   - {fileID: 4086484493183858024, guid: c800731150ac6ea408ce751ae7822f2d, type: 3}
   - {fileID: 2209683159978233973, guid: 4112060b1257f194f9e52deafc116b33, type: 3}
@@ -576,6 +587,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6983048706563928487, guid: 4f4a4c7126c3d0146af9e3bd6518cae1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 6983048706563928487, guid: 4f4a4c7126c3d0146af9e3bd6518cae1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6983048706563928492, guid: 4f4a4c7126c3d0146af9e3bd6518cae1,
         type: 3}
       propertyPath: player
@@ -759,6 +780,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8710071688158864600, guid: 24e83fbf789ce0c44a3d9558d26d9d9c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8710071688158864605, guid: 24e83fbf789ce0c44a3d9558d26d9d9c,
         type: 3}

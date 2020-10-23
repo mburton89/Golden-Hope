@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Enemy : MonoBehaviour
+public class EnemyUI : MonoBehaviour
 {
     public Slider EnemyHP;
     public Vector3 Offset;

@@ -12,7 +12,7 @@ public class Weapon : MonoBehaviour
 
     public int Damage;
 
-    public Enemy EnemyController;
+    public EnemyUI EnemyController;
     public Combat PlayerController;
     
     // Start is called before the first frame update
@@ -34,7 +34,7 @@ public class Weapon : MonoBehaviour
         weaponHitBox.gameObject.SetActive(false);
     }
 
-    public void ApplyDamage(Enemy enemyToHurt)
+    public void ApplyDamage(EnemyUI enemyToHurt)
     {
         EnemyController = enemyToHurt;
         enemyToHurt.TakeDamage(Damage, transform.position);

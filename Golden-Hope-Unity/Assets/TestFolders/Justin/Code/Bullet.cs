@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-
     //public GameObject hitEffect;
 
-    void OnTriggerEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        //GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
-        //Destroy(effect, 5f);
-        Debug.Log("Beepd");
-        Destroy(gameObject);
+        if (collision.tag != "Enemy")
+        {
+            //GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
+            //Destroy(effect, 5f);
+            Debug.Log("Beepd");
+            Destroy(gameObject);
+        }
     }
 }
