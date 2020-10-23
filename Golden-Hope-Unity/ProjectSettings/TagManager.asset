@@ -6,7 +6,7 @@ TagManager:
   tags:
   - SpawnPoint
   - Rooms
-  - Room
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -16,7 +16,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Player
   - 
   - 
   - 

@@ -13,6 +13,9 @@ public class Combat : MonoBehaviour
     public int Dark_Essence;
     public int Max_Armor;
     public int Current_Armor;
+    //public string Weapon;
+    //public string Current_Weapon;
+    public Weapon CombatController;
     
 
 
@@ -41,6 +44,7 @@ public class Combat : MonoBehaviour
         Armor_3.isOn = true;
 
         Dark_Essence = 0;
+
     }
 
     // Update is called once per frame
@@ -49,6 +53,10 @@ public class Combat : MonoBehaviour
         UpdateHealth();
         UpdateArmor();
         DarkEssence.text = Dark_Essence.ToString();
+        if(Input.GetMouseButtonDown(0))
+        {
+            Attack();
+        }
     }
 
     public void UpdateHealth()
@@ -95,5 +103,10 @@ public class Combat : MonoBehaviour
             Armor_2.isOn = true;
             Armor_3.isOn = true;
         }
+    }
+
+    public void Attack()
+    {
+        CombatController.Swing();
     }
 }
