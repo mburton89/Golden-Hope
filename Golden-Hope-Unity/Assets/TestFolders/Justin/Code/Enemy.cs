@@ -20,12 +20,17 @@ public class Enemy : Character
     private Vector2 movement;
     private State state;
 
+    private EnemyAttackAI attackAI;
+
     public float move;
+
+    public bool movementOverride = false;
 
     // Start is called before the first frame update
     public virtual void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+        attackAI = this.GetComponent<EnemyAttackAI>();
         state = State.Follow;
         move = moveSpeed;
     }
@@ -74,7 +79,10 @@ public class Enemy : Character
 
     private void FixedUpdate()
     {
-        moveCharacter(movement);
+        if (!movementOverride)
+        {
+            moveCharacter(movement);
+        }
     }
 
     void moveCharacter(Vector2 direction)
@@ -84,11 +92,12 @@ public class Enemy : Character
 
     public virtual void Attack(float distanceToPlayer)
     {
-        move = 0f;
+        //move = 0f;
         print("I SUMMON GENERIC ENEMY, IN ATTACK MODE!!");
         /*
             this is where the enemy would attack
         */
+        attackAI.CheckAttack();
         if (distanceToPlayer > attackRange)
         {
             state = State.Follow;

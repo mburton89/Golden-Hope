@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 2303052074372581103}
   - component: {fileID: 8472213411122811845}
   - component: {fileID: 2516785298428559700}
+  - component: {fileID: 219582254264356754}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -180,9 +181,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2303052074372581104}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e4c2f61fa7c2f0248a20b41c2d45fe91, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -191,6 +192,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &219582254264356754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2303052074372581104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0b5c6baae7677f4aa8c52a493223f97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Instance: {fileID: 0}
+  healthText: {fileID: 0}
+  armorText: {fileID: 0}
+  moneyText: {fileID: 0}
 --- !u!1 &2303052074738716943
 GameObject:
   m_ObjectHideFlags: 0
