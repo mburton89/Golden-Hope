@@ -22,6 +22,11 @@ public class Enemy : Character
 
     public float move;
 
+    public void Awake()
+    {
+        player = GameObject.Find("Player").transform;
+    }
+
     // Start is called before the first frame update
     public virtual void Start()
     {
@@ -64,12 +69,12 @@ public class Enemy : Character
 
 
         }
-        
+
         if (health <= 0)
         {
             Destroy(gameObject);
         }
-        
+
     }
 
     private void FixedUpdate()
