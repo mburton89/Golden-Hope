@@ -3546,7 +3546,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1631521343933004028, guid: 9a3256ebe007b1a4385a35fca89c7cbc,
+  m_Sprite: {fileID: 6030157497644266709, guid: 9a3256ebe007b1a4385a35fca89c7cbc,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3924,7 +3924,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3551137569268341730}
   m_Layer: 0
-  m_Name: Room - L1
+  m_Name: Room - NoDoors 1
   m_TagString: Room
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
