@@ -502,7 +502,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -273, y: -43.800003}
+  m_AnchoredPosition: {x: -279.5, y: -176.5}
   m_SizeDelta: {x: 222.53534, y: 44.945145}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &354544859
@@ -653,7 +653,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -273, y: -46}
+  m_AnchoredPosition: {x: -279.5, y: -178.7}
   m_SizeDelta: {x: 222.56078, y: 49.294388}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &483468120
@@ -797,7 +797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textBox: {fileID: 351325445}
   dialogue: {fileID: 636717015}
-  textFile: {fileID: 4900000, guid: b23860f68e1c62742b05af326be3921b, type: 3}
+  textFile: {fileID: 4900000, guid: f660b5e586b2f5943a62dc54c18533c8, type: 3}
   textLines: []
   CurrentLine: 0
   endAtLine: 0
@@ -1153,7 +1153,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -273, y: -46.000004}
+  m_AnchoredPosition: {x: -279.5, y: -178.7}
   m_SizeDelta: {x: 231.80777, y: 56.71228}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1879004992
