@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HealthPickup : Collectable
 {
-    public override void Collect()
+    public override void Collect(CharacterControl player)
     {
         if (CharacterStats.health >= CharacterStats.maxHealth)
         {

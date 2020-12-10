@@ -191,6 +191,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Room - TBLR
       objectReference: {fileID: 0}
+    - target: {fileID: 8248302394186256617, guid: 47d68e469dcc1f743bce27fa9ffa226c,
+        type: 3}
+      propertyPath: startingRoom
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47d68e469dcc1f743bce27fa9ffa226c, type: 3}
 --- !u!1 &249810894
@@ -378,6 +383,11 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 1743649906}
+    - target: {fileID: 3352244887933529169, guid: 9b18e090d7f674346b12e9b7b5c13cd1,
+        type: 3}
+      propertyPath: active
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3352244887933529178, guid: 9b18e090d7f674346b12e9b7b5c13cd1,
         type: 3}
       propertyPath: m_Name

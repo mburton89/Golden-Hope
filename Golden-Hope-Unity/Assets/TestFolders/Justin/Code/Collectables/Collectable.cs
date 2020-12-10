@@ -20,9 +20,8 @@ public class Collectable : MonoBehaviour
         {
             if (collision.tag == "Player")
             {
-                Collect();
+                Collect(collision.GetComponent<CharacterControl>());
                 Destroy(gameObject);
-                player.GetComponent<CharacterStats>().Instance.ChangeText();
             }
         }
         else
@@ -45,7 +44,7 @@ public class Collectable : MonoBehaviour
         }
     }*/
 
-    public virtual void Collect()
+    public virtual void Collect(CharacterControl player)
     {
         Debug.Log("Default Collectable");
     }

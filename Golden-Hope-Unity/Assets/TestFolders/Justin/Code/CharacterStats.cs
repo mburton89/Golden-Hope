@@ -12,10 +12,6 @@ public class CharacterStats : MonoBehaviour
     public static int maxArmor = 5;
     public static int armor = 0;
 
-    public Text healthText;
-    public Text armorText;
-    public Text moneyText;
-
     private void Start()
     {
         if (Instance == null)
@@ -26,14 +22,6 @@ public class CharacterStats : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        ChangeText();
     }
-
-    public void ChangeText()
-    {
-        Debug.Log("Changing Text");
-        healthText.text = health.ToString();
-        armorText.text = armor.ToString();
-        moneyText.text = money.ToString();
-    }
+    
 }

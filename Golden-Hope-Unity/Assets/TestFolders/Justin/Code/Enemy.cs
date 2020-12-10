@@ -12,7 +12,7 @@ public class Enemy : Character
         Dead
     };
 
-
+    public bool active = false;
     public Transform player;
     public float moveSpeed = 5f;
     public float attackRange = 10f;
@@ -33,6 +33,11 @@ public class Enemy : Character
         attackAI = this.GetComponent<EnemyAttackAI>();
         state = State.Follow;
         move = moveSpeed;
+        if (!active)
+        {
+            enabled = false;
+        }
+        player = GameObject.Find("Player").GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -107,5 +112,18 @@ public class Enemy : Character
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, attackRange);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<CharacterControl>().TakeDamage(2);
+        }
+    }
+
+    public void PrintTarget()
+    {
+        Debug.Log(player.position);
     }
 }

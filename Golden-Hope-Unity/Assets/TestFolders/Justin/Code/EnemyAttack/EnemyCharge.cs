@@ -26,7 +26,7 @@ public class EnemyCharge : EnemyAttackAI
         Transform t = e.player;
         Vector2 v2 = new Vector2(t.position.x, t.position.y);
 
-        Instantiate(test, t.position, Quaternion.identity);
+        //Instantiate(test, t.position, Quaternion.identity);
 
         Vector2 dir = new Vector2(v2.x - e.gameObject.GetComponent<Transform>().position.x, v2.y - e.gameObject.GetComponent<Transform>().position.y);
         dir.Normalize();

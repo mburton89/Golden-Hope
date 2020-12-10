@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class ArmorPickup : Collectable
 {
-    public override void Collect()
+    public override void Collect(CharacterControl player)
     {
-        if (CharacterStats.armor >= CharacterStats.maxArmor)
+        if (player.armor >= player.maxArmor)
         {
-            CharacterStats.armor = CharacterStats.maxArmor;
+            CharacterStats.armor = player.maxArmor;
         }
         else
         {

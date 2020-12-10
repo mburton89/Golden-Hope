@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DarkEssence : Collectable
 {
-    public override void Collect()
+    public override void Collect(CharacterControl player)
     {
         CharacterStats.money++;
     }
