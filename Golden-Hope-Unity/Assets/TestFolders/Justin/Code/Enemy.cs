@@ -12,7 +12,7 @@ public class Enemy : Character
         Dead
     };
 
-
+    public bool active = false;
     public Transform player;
     public float moveSpeed = 5f;
     public float attackRange = 10f;
@@ -20,14 +20,24 @@ public class Enemy : Character
     private Vector2 movement;
     private State state;
 
+    private EnemyAttackAI attackAI;
+
     public float move;
+
+    public bool movementOverride = false;
 
     // Start is called before the first frame update
     public virtual void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
+        attackAI = this.GetComponent<EnemyAttackAI>();
         state = State.Follow;
         move = moveSpeed;
+        if (!active)
+        {
+            enabled = false;
+        }
+        player = GameObject.Find("Player").GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -74,7 +84,10 @@ public class Enemy : Character
 
     private void FixedUpdate()
     {
-        moveCharacter(movement);
+        if (!movementOverride)
+        {
+            moveCharacter(movement);
+        }
     }
 
     void moveCharacter(Vector2 direction)
@@ -84,11 +97,12 @@ public class Enemy : Character
 
     public virtual void Attack(float distanceToPlayer)
     {
-        move = 0f;
+        //move = 0f;
         print("I SUMMON GENERIC ENEMY, IN ATTACK MODE!!");
         /*
             this is where the enemy would attack
         */
+        attackAI.CheckAttack();
         if (distanceToPlayer > attackRange)
         {
             state = State.Follow;
@@ -98,5 +112,18 @@ public class Enemy : Character
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, attackRange);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<CharacterControl>().TakeDamage(2);
+        }
+    }
+
+    public void PrintTarget()
+    {
+        Debug.Log(player.position);
     }
 }

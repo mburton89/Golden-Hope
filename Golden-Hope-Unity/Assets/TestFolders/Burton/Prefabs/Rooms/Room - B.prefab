@@ -3081,6 +3081,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4086484493183858007}
+  - component: {fileID: 884606962119351646}
   m_Layer: 0
   m_Name: Room - B
   m_TagString: Room
@@ -3101,9 +3102,28 @@ Transform:
   m_Children:
   - {fileID: 7498900497256584706}
   - {fileID: 2394913216242962840}
+  - {fileID: 3351850091896075514}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &884606962119351646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4086484493183858024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a22e915f0fae4043a822d9263405fd4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typeOfRoom: B
+  eligableRooms:
+  - {fileID: 296790412543816889, guid: 36df0e87f7ddcf149b81311fc49b710e, type: 3}
+  - {fileID: 184523352236363954, guid: d866fc67e983db6409dfe69907d235a3, type: 3}
+  startingRoom: 0
+  enemiesInRoom: []
 --- !u!1 &4086484493246502108
 GameObject:
   m_ObjectHideFlags: 0
@@ -4738,3 +4758,88 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1001 &678701640643610096
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4086484493183858007}
+    m_Modifications:
+    - target: {fileID: 2877538948502712586, guid: 949bfb4a552a6f44caf0988dbf74f8d0,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877538948502712586, guid: 949bfb4a552a6f44caf0988dbf74f8d0,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877538948502712586, guid: 949bfb4a552a6f44caf0988dbf74f8d0,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877538948502712586, guid: 949bfb4a552a6f44caf0988dbf74f8d0,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877538948502712586, guid: 949bfb4a552a6f44caf0988dbf74f8d0,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877538948502712586, guid: 949bfb4a552a6f44caf0988dbf74f8d0,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877538948502712586, guid: 949bfb4a552a6f44caf0988dbf74f8d0,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877538948502712586, guid: 949bfb4a552a6f44caf0988dbf74f8d0,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877538948502712586, guid: 949bfb4a552a6f44caf0988dbf74f8d0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877538948502712586, guid: 949bfb4a552a6f44caf0988dbf74f8d0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877538948502712586, guid: 949bfb4a552a6f44caf0988dbf74f8d0,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5626401298680611902, guid: 949bfb4a552a6f44caf0988dbf74f8d0,
+        type: 3}
+      propertyPath: rooms.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5626401298680611902, guid: 949bfb4a552a6f44caf0988dbf74f8d0,
+        type: 3}
+      propertyPath: rooms.Array.data[0]
+      value: 
+      objectReference: {fileID: 4086484493183858024}
+    - target: {fileID: 5932885081270171634, guid: 949bfb4a552a6f44caf0988dbf74f8d0,
+        type: 3}
+      propertyPath: m_Name
+      value: TopRoomEntrance
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 949bfb4a552a6f44caf0988dbf74f8d0, type: 3}
+--- !u!4 &3351850091896075514 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2877538948502712586, guid: 949bfb4a552a6f44caf0988dbf74f8d0,
+    type: 3}
+  m_PrefabInstance: {fileID: 678701640643610096}
+  m_PrefabAsset: {fileID: 0}

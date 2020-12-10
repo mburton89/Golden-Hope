@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: fdb50b44dfc3dc746bf7983c9c844c66, type: 3}
   m_Color: {r: 0.5981132, g: 0.93162113, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -93,8 +93,8 @@ GameObject:
   - component: {fileID: 3352244887933529183}
   - component: {fileID: 3352244887933529181}
   - component: {fileID: 3352244887933529169}
-  - component: {fileID: 4482891974188196446}
   - component: {fileID: 237345205297822159}
+  - component: {fileID: 5502520792032613464}
   m_Layer: 0
   m_Name: EnemyCharger
   m_TagString: Untagged
@@ -154,18 +154,8 @@ MonoBehaviour:
   player: {fileID: 0}
   moveSpeed: 2
   attackRange: 1
---- !u!114 &4482891974188196446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3352244887933529178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6242a884538dfba459995b669ecf6d0b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  move: 0
+  movementOverride: 0
 --- !u!58 &237345205297822159
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -182,3 +172,24 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.35
+--- !u!114 &5502520792032613464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3352244887933529178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6b32e81a2753944b931cbd68acf374, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startTimeBetweenAttack: 5
+  attackPos: {fileID: 3352244887933529183}
+  whatIsPlayer:
+    serializedVersion: 2
+    m_Bits: 256
+  attackRange: 3
+  damage: 2
+  willAttack: 1
+  test: {fileID: 8966257063100430682, guid: 87d01298c617f944b9bd5fb7ddaf8b95, type: 3}

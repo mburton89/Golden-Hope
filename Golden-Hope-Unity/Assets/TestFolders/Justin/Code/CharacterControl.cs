@@ -19,6 +19,8 @@ public class CharacterControl : Character
     public Animator animator;
 
     private State state = State.Normal;
+    public int armor;
+    public int maxArmor;
 
 
     // Start is called before the first frame update
@@ -94,17 +96,17 @@ public class CharacterControl : Character
         {
             _rigidBody2D.drag = 0f;
             AttemptMove(horizontal, vertical);
-            animator.SetBool("Moving", true);
+            //animator.SetBool("Moving", true);
         }
         else
         {
             _rigidBody2D.drag = 5f;
-            animator.SetBool("Moving", false);
+            //animator.SetBool("Moving", false);
         }
 
         //animator.SetFloat("Horizontal", movement.x);
         //animator.SetFloat("Vertical", movement.y);
-        animator.SetFloat("Speed", movement.magnitude);
+        //animator.SetFloat("Speed", movement.magnitude);
 
         if (movement.x < 0)
         {
@@ -155,8 +157,8 @@ public class CharacterControl : Character
         }
 
         bool attack = Input.GetMouseButtonDown(0);
-        animator.SetBool("Attacking", attack);
-        animator.SetInteger("Direction", direction);
+        //animator.SetBool("Attacking", attack);
+        //animator.SetInteger("Direction", direction);
     }
 
     void FixedUpdate()
@@ -175,9 +177,10 @@ public class CharacterControl : Character
 
     IEnumerator Attack()
     {
-        animator.SetBool("Attacking", true);
+        //animator.SetBool("Attacking", true);
         yield return new WaitForSeconds(0.5f);
-        animator.SetBool("Attacking", false);
+        //animator.SetBool("Attacking", false);
         state = State.Normal;
     }
+    
 }

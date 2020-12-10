@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyAttack : MonoBehaviour
+public class EnemyAttackAI : MonoBehaviour
 {
     public float startTimeBetweenAttack;
     private float timeBetweenAttack;
@@ -12,25 +12,36 @@ public class EnemyAttack : MonoBehaviour
     public float attackRange;
     public int damage;
     public bool willAttack = true;
-    // Update is called once per frame
+
     void Update()
     {
         if (timeBetweenAttack <= 0)
         {
-            if (willAttack)
+            if (!willAttack)
             {
-                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsPlayer);
-                for (int i = 0; i < enemiesToDamage.Length; i++)
-                {
-                    enemiesToDamage[i].GetComponent<CharacterControl>().TakeDamage(damage);
-                }
+                willAttack = true;
             }
-            timeBetweenAttack = startTimeBetweenAttack;
         }
         else
         {
             timeBetweenAttack -= Time.deltaTime;
         }
+    }
+
+    public void CheckAttack()
+    {
+        if (willAttack)
+        {
+            Attack();
+            willAttack = false;
+            timeBetweenAttack = startTimeBetweenAttack;
+        }
+
+    }
+
+    public virtual void Attack()
+    {
+        Debug.Log("No Attack AI");
     }
 
     private void OnDrawGizmosSelected()

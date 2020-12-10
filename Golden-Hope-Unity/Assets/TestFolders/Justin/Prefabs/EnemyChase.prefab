@@ -152,9 +152,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 4
-  player: {fileID: 0}
+  player: {fileID: 2303052074372581101, guid: 694bc406ceef809489351f829e833c3d, type: 3}
   moveSpeed: 2
   attackRange: 1
+  move: 0
+  movementOverride: 0
 --- !u!114 &8710071688158864604
 MonoBehaviour:
   m_ObjectHideFlags: 0
