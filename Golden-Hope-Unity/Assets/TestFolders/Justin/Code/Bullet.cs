@@ -10,10 +10,19 @@ public class Bullet : MonoBehaviour
     {
         if (collision.tag != "Enemy")
         {
-            //GameObject effect = Instantiate(hitEffect, transform.position, Quaternion.identity);
-            //Destroy(effect, 5f);
-            Debug.Log("Beepd");
             Destroy(gameObject);
+            if (collision.tag == "Player")
+            {
+                //CharacterStats cs = collision.GetComponent<CharacterStats>();
+                if (CharacterStats.armor > 0)
+                {
+                    CharacterStats.armor--;
+                }
+                else
+                {
+                    CharacterStats.health -= 2;
+                }
+            }
         }
     }
 }

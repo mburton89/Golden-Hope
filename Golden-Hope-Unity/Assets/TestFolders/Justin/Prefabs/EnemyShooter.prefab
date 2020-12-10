@@ -69,13 +69,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startTimeBetweenAttack: 1
-  firePoint: {fileID: 6290498147737962034}
-  bulletPrefab: {fileID: 6535082945593788167, guid: 6f97939319a113e4bbc6d51f2d6896d6,
-    type: 3}
+  attackPos: {fileID: 6290498147737962034}
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 256
+  attackRange: 4
   damage: 4
+  willAttack: 1
+  firePoint: {fileID: 6290498147737962034}
+  bulletPrefab: {fileID: 6535082945593788167, guid: 6f97939319a113e4bbc6d51f2d6896d6,
+    type: 3}
   bulletForce: 5
 --- !u!58 &6706886627926083456
 CircleCollider2D:
@@ -106,10 +109,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
-  player: {fileID: 2303052074372581101, guid: 694bc406ceef809489351f829e833c3d, type: 3}
+  player: {fileID: 6767982001925374046, guid: 694bc406ceef809489351f829e833c3d, type: 3}
   moveSpeed: 5
-  attackRange: 50
+  attackRange: 13.8
   move: 0
+  movementOverride: 0
 --- !u!1 &6290498149267685567
 GameObject:
   m_ObjectHideFlags: 0

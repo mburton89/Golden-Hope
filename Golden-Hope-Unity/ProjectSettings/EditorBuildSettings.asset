@@ -4,5 +4,11 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/TestFolders/Justin/Scenes/JustinTestScene 3.unity
+    guid: 1cde687e738f9ce4c8a8ea34589cd316
+  - enabled: 1
+    path: Assets/TestFolders/Justin/Scenes/NewFloor.unity
+    guid: db955190aedcf114580ec9bbdbba8f93
   m_configObjects: {}
