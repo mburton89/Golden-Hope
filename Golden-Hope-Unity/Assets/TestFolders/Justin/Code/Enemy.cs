@@ -37,7 +37,7 @@ public class Enemy : Character
         {
             enabled = false;
         }
-        player = GameObject.Find("Player").GetComponent<Transform>();
+        player = GameObject.Find("ActivePlayer").GetComponent<Transform>();
     }
 
     // Update is called once per frame

@@ -19,7 +19,10 @@ public class RoomEntrance : MonoBehaviour
         {
             overlap = true;
         }
-        rooms[0].GetComponent<InRoomManager>().ActivateRoom();
+        if (other.gameObject.tag == "Player")
+        {
+            rooms[0].GetComponent<InRoomManager>().ActivateRoom();
+        }
     }
 
     private void UpdatePlayerRoom()

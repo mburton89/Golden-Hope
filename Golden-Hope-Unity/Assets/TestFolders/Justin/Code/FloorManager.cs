@@ -17,14 +17,15 @@ public class FloorManager : MonoBehaviour
 
         currentFloor = 0;
 
-        floors.Add("JustinTestScene3");
+        floors.Add("JustinTestScene 3");
         floors.Add("NewFloor");
     }
 
     public static void NextFloor()
     {
-        currentFloor++;
+        //currentFloor++;
         SceneManager.LoadScene(floors[currentFloor]);
+        
     }
 
 }
